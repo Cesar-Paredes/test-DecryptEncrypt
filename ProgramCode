@@ -1,0 +1,399 @@
+//Author: Cesar Paredes
+//Date: July 10, 2019
+
+
+package tests;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+
+public class tests {
+	
+	
+	public static void main (String[]args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+		
+		String message;//the user choose if encrypt or decrypt
+		String repeat = null;//repeats program if user writes "yes"
+		String cryptMessage;//words to encrypt 
+		
+		
+		int numberOfDigits = 0;//for the decrypt array
+		String [] decryptMessage;//numbers to decrypt
+		
+		
+	    char [] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+        
+
+	
+		
+		
+		
+	do {	
+		System.out.println("This program will ENCRYPT letters and DECRYPT numbers.");
+		System.out.println();
+		System.out.println("Would you like to Encrypt or Decrypt?");
+		message = keyboard.nextLine();
+		message = message.toLowerCase();
+		
+		
+		
+	
+	
+
+		
+	if(message.contentEquals("encrypt") || message.contentEquals("e")) // == only works for numbers and char(characters) or true or false. To compare Strings for equality, don't use ==. The == operator checks to see if two objects are exactly the same object:
+	{
+		System.out.println("Please write the word(s) you would like to encrypt:");
+		
+		cryptMessage = keyboard.nextLine();
+		cryptMessage = cryptMessage.toLowerCase();
+		
+		
+		for(int i = 0; i < cryptMessage.length(); i++)//length counts from 1 
+		{
+			
+			if(cryptMessage.charAt(i) == ' ')
+			{
+				System.out.print(' ');
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[0])
+			{
+				System.out.print("01");
+				
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[1])
+			{
+				System.out.print("02");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[2])
+			{
+				System.out.print("03");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[3])
+			{
+				System.out.print("04");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[4])
+			{
+				System.out.print("05");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[5])
+			{
+				System.out.print("06");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[6])
+			{
+				System.out.print("07");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[7])
+			{
+				System.out.print("08");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[8])
+			{
+				System.out.print("09");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[9])
+			{
+				System.out.print("10");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[10])
+			{
+				System.out.print("11");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[11])
+			{
+				System.out.print("12");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[12])
+			{
+				System.out.print("13");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[13])
+			{
+				System.out.print("14");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[14])
+			{
+				System.out.print("15");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[15])
+			{
+				System.out.print("16");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[16])
+			{
+				System.out.print("17");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[17])
+			{
+				System.out.print("18");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[18])
+			{
+				System.out.print("19");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[19])
+			{
+				System.out.print("20");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[20])
+			{
+				System.out.print("21");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[21])
+			{
+				System.out.print("22");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[22])
+			{
+				System.out.print("23");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[23])
+			{
+				System.out.print("24");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[24])
+			{
+				System.out.print("25");
+			}
+			
+			else if(cryptMessage.charAt(i) == alphabet[25])
+			{
+				System.out.print("26");
+			}
+				
+			
+		}
+		
+		//System.out.println(Arrays.toString(decryptMessage));//Prints the whole array
+		
+		System.out.println();
+		
+		System.out.println(" \nDo you want to use the program again. Yes or No?");
+		repeat = keyboard.nextLine();
+		repeat = repeat.toLowerCase();
+		
+		
+	}
+	
+	else if(message.contentEquals("decrypt") || message.contentEquals("d"))
+	{
+		
+		
+		int decrypt= 0;
+		
+		
+		
+		
+		System.out.println("How many pairs?, example 012405 has 3 pairs \n01 - 24 - 05 ");
+		numberOfDigits = keyboard.nextInt();
+		decryptMessage = new String[numberOfDigits];//creates an array as big as the number of digits the user wants to input 
+		
+		
+		System.out.println("Write the numbers, press enter after every TWO digits. \nexample: \n01 enter \n24 enter \n05 enter");
+		
+		
+		
+		for(int i = 0; i < numberOfDigits; i++ )
+		{
+			
+		
+		
+			decrypt = keyboard.nextInt();
+		
+		
+		
+		
+		
+			 if(decrypt == 1)
+			{
+				decryptMessage[i] = "A" ;
+				//System.out.println(decryptMessage);
+			}
+			
+			else if(decrypt == 2)
+			{
+				decryptMessage[i] = "B" ;
+				
+			}
+			
+			else if(decrypt == 3)
+			{
+				decryptMessage[i] = "C" ;
+			}
+			
+			else if(decrypt == 4)
+			{
+				decryptMessage[i] = "D" ;
+			}
+			
+			else if(decrypt == 5)
+			{
+				decryptMessage[i] = "E" ;			
+			}
+			
+			else if(decrypt == 6)
+			{
+				decryptMessage[i] = "F" ;			
+			}
+			
+			else if(decrypt == 7)
+			{
+				decryptMessage[i] = "G" ;			
+			}
+				
+			else if(decrypt == 8)
+			{
+				decryptMessage[i] = "H" ;			
+			}
+			
+			else if(decrypt == 9)
+			{
+				decryptMessage[i] = "I" ;			
+			}
+			
+			else if(decrypt == 10)
+			{
+				decryptMessage[i] = "J" ;			
+			}
+			
+			else if(decrypt == 11)
+			{
+				decryptMessage[i] = "K" ;			
+			}
+			
+			else if(decrypt == 12)
+			{
+				decryptMessage[i] = "L" ;			
+			}
+			
+			else if(decrypt == 13)
+			{
+				decryptMessage[i] = "M" ;			
+			}
+			
+			else if(decrypt == 14)
+			{
+				decryptMessage[i] = "N" ;			
+			}
+			
+			else if(decrypt == 15)
+			{
+				decryptMessage[i] = "O" ;			
+			}
+			
+			else if(decrypt == 16)
+			{
+				decryptMessage[i] = "P" ;			
+			}
+			
+			else if(decrypt == 17)
+			{
+				decryptMessage[i] = "Q" ;			
+			}
+			
+			else if(decrypt == 18)
+			{
+				decryptMessage[i] = "R" ;			
+			}
+			
+			else if(decrypt == 19)
+			{
+				decryptMessage[i] = "S" ;			
+			}
+				
+			else if(decrypt == 20)
+			{
+				decryptMessage[i] = "T" ;			
+			}
+			
+			else if(decrypt == 21)
+			{
+				decryptMessage[i] = "U" ;			
+			}
+		
+			
+			else if(decrypt == 22)
+			{
+				decryptMessage[i] = "V" ;			
+			}
+			
+			else if(decrypt == 23)
+			{
+				decryptMessage[i] = "W" ;
+			}
+			
+			else if(decrypt == 24)
+			{
+				decryptMessage[i] = "X" ;
+			}
+			
+			else if(decrypt == 25)
+			{
+				decryptMessage[i] = "Y" ;
+			}
+			
+			else if(decrypt == 26)
+			{
+				decryptMessage[i] = "Z" ;
+			}
+		
+		}
+		
+		System.out.println(Arrays.toString(decryptMessage));//Prints the whole array
+		System.out.println();
+		repeat = keyboard.nextLine();
+		repeat = repeat.toLowerCase();
+		System.out.println(" \nDo you want to use the program again. Yes or No?");
+		repeat = keyboard.nextLine();
+		repeat = repeat.toLowerCase();
+		
+	}
+	
+	
+	
+	
+	
+	}while(repeat.contentEquals("yes") || repeat.contentEquals("y"));
+	System.out.println();
+	System.out.println();
+	System.out.println();
+	System.out.println();
+	System.out.println();
+	System.out.println();
+	System.out.println("Thank you");
+	System.out.println();
+	System.out.println("Created by Cesar Paredes");
+	}
+	
+}
